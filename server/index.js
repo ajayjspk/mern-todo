@@ -6,7 +6,12 @@ const TodoModel=require("./models/Schema")
 
 
 const app=express()
-app.use(cors())
+app.use(cors(
+    { origin:{"https://mern-todo-pi-nine.vercel.app/"},
+     methods:["POST","GET"],
+     Credentials:true
+    }
+))
 app.use(express.json())
 
 // Database connection
