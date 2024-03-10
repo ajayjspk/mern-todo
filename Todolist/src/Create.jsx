@@ -5,7 +5,7 @@ import axios from 'axios'
 
     const [task, setTask]=useState()
     const handleAdd=()=>{
-        axios.post("http://localhost:3001/add",{task:task})
+        axios.post("mern-todo-api-one.vercel.app/add",{task:task})
         .then(result=> console.log(result))
         .catch(err=>console.log(err))
     }
