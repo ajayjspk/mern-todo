@@ -12,14 +12,14 @@ export default function Home() {
 
 //writeing data into page
     useEffect(()=>{
-      axios.get('http://localhost:3001/get')
+      axios.get('mern-todo-api-one.vercel.app/get')
       .then(result=>setTodos(result.data))
       .catch(err=>console.log(err))
     })
 
 
 const handleEdit=(id,a)=>{
-axios.put('http://localhost:3001/update/'+id)
+axios.put('mern-todo-api-one.vercel.app/update/'+id)
 .then((result)=>console.log(result))
 .catch(err=>console.log(err))
 if(!a)
@@ -28,7 +28,7 @@ else a=true;
 }
 
 const deleteHandler = (id) => {
-  axios.delete('http://localhost:3001/delete/'+id)
+  axios.delete('mern-todo-api-one.vercel.app/delete/'+id)
 .then((result)=>console.log(result))
 .catch(err=>console.log(err))
 }
