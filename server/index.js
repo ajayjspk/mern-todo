@@ -7,7 +7,7 @@ const TodoModel=require("./models/Schema")
 
 const app=express()
 app.use(cors(
-    { origin:{"mern-todo-frontend-psi.vercel.app/"},
+    { origin:{"mern-todo-frontend-psi.vercel.app"},
      methods:["POST","GET"],
      Credentials:true
     }
