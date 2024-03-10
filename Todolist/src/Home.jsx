@@ -8,7 +8,7 @@ import { FaCircleCheck } from "react-icons/fa6";
 export default function Home() {
 
     const [todos,setTodos]=useState([]);
-
+    axios.defaults.withCredentials=true;
 
 //writeing data into page
     useEffect(()=>{
